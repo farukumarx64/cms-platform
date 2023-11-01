@@ -2,7 +2,7 @@ import { motion, useTransform } from "framer-motion";
 
 export default function CircularProgress({ progress }) {
   const circleLength = useTransform(progress, [0, 100], [0, 1]);
-  const checkmarkPathLength = useTransform(progress, [0, 95, 100], [0, 0, 1]);
+  const checkMarkPathLength = useTransform(progress, [0, 95, 100], [0, 0, 1]);
   const circleColor = useTransform(
     progress,
     [0, 95, 100],
@@ -23,7 +23,7 @@ export default function CircularProgress({ progress }) {
         fill="transparent"
         stroke="#7BB86F"
         strokeWidth={8}
-        style={{ pathLength: checkmarkPathLength }}
+        style={{ pathLength: checkMarkPathLength }}
       />
       {/* Circle */}
       <motion.path
