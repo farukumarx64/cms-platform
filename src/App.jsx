@@ -1,15 +1,23 @@
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css'
-import { v4 as uuidv4 } from 'uuid';
 import ConfirmationPage from './components/ConfirmationPage';
+import FormPage from './components/FormPage';
 
 function App() {
-  const a = uuidv4(), b = uuidv4();
-  console.log(a, b)
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <FormPage />,
+    },
+    {
+      path: "/confirm",
+      element: <ConfirmationPage />,
+      
+    },
+  ]);
 
   return (
-    <>
-    <ConfirmationPage />
-    </>
+    <RouterProvider router={router} />
   )
 }
 
