@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
-//import  '../styles/FormPage.css'
+import  '../styles/FormPage.css'
 
 class FormPage extends Component {
   constructor(props) {
