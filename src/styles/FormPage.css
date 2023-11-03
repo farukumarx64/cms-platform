@@ -16,8 +16,8 @@ body{
 
 a {
   font-weight: 500;
-  color: white;
-  text-decoration: none !important;
+  color: green;
+  text-decoration: inherit;
 }
 a:hover {
   color: green;
@@ -58,10 +58,13 @@ button:focus-visible {
 select{
   height: 40px;
   width: 150px;
-  background-color: green;
   border: none;
-  color: #fff;
+  color: green;
   align-items: center;
+  border-radius: 8px;
+  background-color: #d2dbd6;
+
+  
  
 
 }
