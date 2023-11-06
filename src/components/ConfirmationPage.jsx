@@ -1,8 +1,10 @@
+import { useTicket } from "../contexts/TicketContext";
 import CircularProgress from "./animations/CircularProgress";
-import { motion, useMotionValue} from "framer-motion"
+import { motion, useMotionValue } from "framer-motion";
 
 export default function ConfirmationPage() {
-  const progress = useMotionValue(90)
+  const {ticket} = useTicket()
+  const progress = useMotionValue(90);
   return (
     <div className="confirmation-container">
       <motion.div
@@ -15,8 +17,11 @@ export default function ConfirmationPage() {
       <h2>Complaint Submitted Successfully!</h2>
       <p>
         Thank you for submitting your complaint. Our team will review it
-        shortly.
+        shortly!
       </p>
+      <h3>
+      Your ticket is {ticket}
+      </h3>
     </div>
   );
 }
