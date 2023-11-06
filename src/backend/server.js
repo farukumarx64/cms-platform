@@ -15,9 +15,7 @@ const limiter = rateLimit({
   message: "Too many requests from this IP, please try again later.",
 });
 
-app.use("/generate-ticket", limiter);
-
-app.get("/generate-ticket", (req, res) => {
+app.get("/generate-ticket", limiter, (req, res) => {
   execFile("./generate-ticket/output/generate-ticket", (err, stdout, stderr) => {
     if (err) {
       console.error(`Error executing child process: ${err}`);
