@@ -1,18 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-
-body{
+body {
   margin: 0;
   padding: 0;
   font-family: "Poppins";
   background-color: whitesmoke;
 }
 
-*{
+* {
   box-sizing: border-box;
-
 }
-
 
 a {
   font-weight: 500;
@@ -48,14 +45,14 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color:green;
+  border-color: green;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-select{
+select {
   height: 40px;
   width: 150px;
   border: none;
@@ -63,12 +60,7 @@ select{
   align-items: center;
   border-radius: 8px;
   background-color: #d2dbd6;
-
-  
- 
-
 }
-
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -76,16 +68,14 @@ select{
     background-color: #ffffff;
   }
   a:hover {
-    color:green;
+    color: green;
   }
   button {
     background-color: #d2dbd6;
   }
 }
 
-
-
-form{
+form {
   display: block;
   background-color: white;
   box-shadow: 1px 1px 3px 2px #ddd;
@@ -95,8 +85,8 @@ form{
   padding: 20px 40px;
 }
 
-form input, textarea{
-
+form input,
+textarea {
   display: flex;
   flex-direction: column;
   width: 100%;
