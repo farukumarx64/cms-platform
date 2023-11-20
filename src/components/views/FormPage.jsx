@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/FormPage.css";
+import "../../styles/FormPage.css";
 import axios from "axios";
-import { useTicket } from "../contexts/TicketContext";
+import { useTicket } from "../../contexts/TicketContext";
 
 const FormPage = () => {
   const {setTicket} = useTicket();
@@ -145,7 +145,7 @@ const FormPage = () => {
         </div>
         <div>
           <button type="submit" className="submit-button" onClick={handleSubmit}>
-            <Link to="confirm">submit</Link>
+            <Link to="/confirm">submit</Link>
           </button>
         </div>
       </form>
