@@ -1,5 +1,5 @@
-import { useTicket } from "../contexts/TicketContext";
-import CircularProgress from "./animations/CircularProgress";
+import { useTicket } from "../../contexts/TicketContext";
+import CircularProgress from "../animations/CircularProgress";
 import { motion, useMotionValue } from "framer-motion";
 
 export default function ConfirmationPage() {
