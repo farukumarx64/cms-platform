@@ -1,0 +1,82 @@
+[
+  {
+    "complainHeader": "Leakage Issue",
+    "name": "Green Energy Petrol Station",
+    "email": "greenenergy@example.com",
+    "address": "123 Main Street, Cityville, Nigeria",
+    "complainDescription": "There is a noticeable fuel leakage near the fuel dispensers.",
+    "category": "Retail Outlet Facility"
+  },
+  {
+    "complainHeader": "Safety Concern",
+    "name": "Swift Fueling Station",
+    "email": "swiftfuel@example.com",
+    "address": "456 Oak Avenue, Townsville, Nigeria",
+    "complainDescription": "Lack of proper safety measures, no fire extinguishers available.",
+    "category": "Add-On SKID"
+  },
+  {
+    "complainHeader": "Environmental Issue",
+    "name": "Blue Wave LNG Station",
+    "email": "bluewave@example.com",
+    "address": "789 Pine Road, Villageland, Nigeria",
+    "complainDescription": "The LNG facility is causing environmental pollution.",
+    "category": "LNG Facility"
+  },
+  {
+    "complainHeader": "Infrastructure Problem",
+    "name": "Sunshine CNG Depot",
+    "email": "sunshinecng@example.com",
+    "address": "101 Palm Drive, Hamlet City, Nigeria",
+    "complainDescription": "CNG facility infrastructure needs urgent repair.",
+    "category": "CNG Facility"
+  },
+  {
+    "complainHeader": "Gas Plant Concern",
+    "name": "Golden Gas Plant",
+    "email": "goldengas@example.com",
+    "address": "202 Maple Street, Riverside, Nigeria",
+    "complainDescription": "Issues with the functioning of the gas plant equipment.",
+    "category": "Gas Plant"
+  },
+  {
+    "complainHeader": "Odor Complaint",
+    "name": "Pristine Refinery",
+    "email": "pristinerefinery@example.com",
+    "address": "303 Cedar Lane, Hilltop, Nigeria",
+    "complainDescription": "Strong odor coming from the refinery premises.",
+    "category": "Refinery"
+  },
+  {
+    "complainHeader": "Quality Concern",
+    "name": "Excel Lube Blending",
+    "email": "excelblending@example.com",
+    "address": "404 Elm Street, Meadowland, Nigeria",
+    "complainDescription": "Dissatisfaction with the quality of lubricants blended.",
+    "category": "Lube Blending Plant"
+  },
+  {
+    "complainHeader": "Service Issue",
+    "name": "Precise Calibration Center",
+    "email": "precisecalibration@example.com",
+    "address": "505 Birch Avenue, Lakeside, Nigeria",
+    "complainDescription": "Poor service quality at the calibration center.",
+    "category": "Calibration Centers"
+  },
+  {
+    "complainHeader": "Storage Problem",
+    "name": "Eco Gas Storage",
+    "email": "ecogasstorage@example.com",
+    "address": "606 Walnut Road, Mountainside, Nigeria",
+    "complainDescription": "Issues with the storage facilities for gas.",
+    "category": "Gas Storage Facility"
+  },
+  {
+    "complainHeader": "Security Concern",
+    "name": "Safe Petroleum Storage",
+    "email": "safepetroleum@example.com",
+    "address": "707 Sycamore Lane, Valleyview, Nigeria",
+    "complainDescription": "Security concerns around the petroleum storage facility.",
+    "category": "Petroleum Storage Facility"
+  }
+]

@@ -96,3 +96,7 @@ textarea {
   background-color: #f3f3f3;
   border: 1px solid #ddd;
 }
+
+input, textarea {
+  color: #1a1a1a;
+}

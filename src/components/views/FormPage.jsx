@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../../styles/FormPage.css";
 import axios from "axios";
 import { useTicket } from "../../contexts/TicketContext";
+import dataBase from "../../backend/dataBase";
 
 const FormPage = () => {
   const {setTicket} = useTicket();
@@ -12,7 +13,7 @@ const FormPage = () => {
     description: "",
     header: "",
     address: "",
-    selectedOption: "Option 1",
+    category: "Option 1",
     file: null,
   });
   
@@ -33,7 +34,7 @@ const FormPage = () => {
   const handleDropdownChange = (event) => {
     setFormData({
       ...formData,
-      selectedOption: event.target.value,
+      category: event.target.value,
     });
   };
 
@@ -41,18 +42,20 @@ const FormPage = () => {
     event.preventDefault();
     console.log("Form data submitted:", formData);
     try {
-      await generateTicket();
+      await generateTicket(formData);
       // You can send the form data to an API or perform any desired action here.
     } catch (error) {
       console.error(error);
     }
   };
   
-  const generateTicket = async () => {
+  const generateTicket = async (formData) => {
+    const localUrl = 'http://localhost:5000/generate-ticket'
     try {
-      const response = await axios.get("http://localhost:5000/generate-ticket");
+      const response = await axios.get(localUrl);
       console.log(response.data.ticketID);
       setTicket(response.data.ticketID);
+      dataBase(formData, response.data.ticketID)
     } catch (error) {
       console.error(error);
       throw error; // Re-throw the error to be caught in the handleSubmit function
@@ -126,12 +129,12 @@ const FormPage = () => {
         <div>
           <label>Select your Problem Category:</label>
           <select
-            name="selectedOption"
-            value={formData.selectedOption}
+            name="category"
+            value={formData.category}
             onChange={handleDropdownChange}
           >
             <option value="Option 1">Retail Outlet Facility</option>
-            <option value="Option 2">Adon SKID</option>
+            <option value="Option 2">Add-On SKID</option>
             <option value="Option 3">LNG Facility</option>
             <option value="Option 4">CNG Facility</option>
             <option value="Option 5">Gas Plant</option>
