@@ -14,7 +14,7 @@ export default class Database {
       // Insert data using Supabase 'upsert' method
       const { data: insertedData, error: insertError } = await this.supabase
         .from("complainData")
-        .upsert([{ ...formData, ticket: ticketID }], { returning: "minimal" });
+        .upsert([{ ...formData, id: ticketID }], { returning: "minimal" });
 
       if (insertError) {
         console.error("Error inserting data:", insertError);
@@ -49,7 +49,7 @@ export default class Database {
       const { data, error } = await this.supabase
         .from("complainData")
         .select("*")
-        .eq("ticket", ticketID);
+        .eq("id", ticketID);
 
       if (error) {
         console.error("Error querying data:", error);
