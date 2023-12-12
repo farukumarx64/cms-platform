@@ -5,11 +5,13 @@ import FormPage from "./components/views/FormPage";
 import { TicketProvider } from "./contexts/TicketContext";
 import LandingPage from "./components/views/LandingPage";
 import TrackingPage from "./components/views/TrackingPage";
+import Login from "./components/views/LoginPage";
+import SignUp from "./components/views/SignupPage";
 
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/home",
       element: <LandingPage />,
     },
     {
@@ -23,6 +25,14 @@ function App() {
     {
       path: "/track-complaint",
       element: <TrackingPage />
+    },
+    {
+      path: '/',
+      element: <Login />,
+    },
+    {
+      path: '/sign-up',
+      element: <SignUp />,
     },
   ]);
 
