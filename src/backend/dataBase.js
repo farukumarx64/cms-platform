@@ -2,7 +2,7 @@ import { createClient } from "@supabase/supabase-js";
 
 export default class Database {
   constructor() {
-    this.supabaseUrl = "https://nalyqbblkzsbsuapjilb.supabase.co";
+    this.supabaseUrl = process.env.SUPABASE_URL;
     this.supabaseKey = process.env.SUPABASE_KEY;
     this.supabase = createClient(this.supabaseUrl, this.supabaseKey);
   }
