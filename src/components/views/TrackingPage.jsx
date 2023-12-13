@@ -137,7 +137,7 @@ const TrackingPage = () => {
       {complaintRecord && (
         <div className="complaint-details">
           <h2>Complaint Record</h2>
-          <p>Ticket ID: &nbsp;&nbsp;&nbsp;&nbsp;{complaintRecord.ticket}</p>
+          <p>Ticket ID: &nbsp;&nbsp;&nbsp;&nbsp;{complaintRecord.id}</p>
           <p>
             Subject Header: &nbsp;&nbsp;&nbsp;&nbsp;{complaintRecord.header}
           </p>
@@ -147,9 +147,9 @@ const TrackingPage = () => {
             {complaintRecord.category}
           </p>
           <p>
-            description: &nbsp;&nbsp;&nbsp;&nbsp;{complaintRecord.description}
+            Description: &nbsp;&nbsp;&nbsp;&nbsp;{complaintRecord.description}
           </p>
-          {/* Add more details as needed */}
+          {<p>Response: &nbsp;&nbsp;&nbsp;&nbsp;{complaintRecord.comment}</p>}
           <button
             className="submit-btn"
             onClick={() => (window.location.href = "/track-complaint")}

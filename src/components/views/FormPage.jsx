@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../styles/FormPage.css";
 import axios from "axios";
 import { useTicket } from "../../contexts/TicketContext";
@@ -8,7 +8,7 @@ import StorageService from "../../backend/storage";
 
 const FormPage = () => {
   const { setTicket } = useTicket();
-  let route = "/confirm";
+  const navigate = useNavigate(); 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -55,7 +55,8 @@ const FormPage = () => {
     const hasEmptyFields = requiredFields.some((field) => !formData[field]);
     if (hasEmptyFields) {
       alert("Please fill out all required fields.");
-      route = "/submit-complaint";
+      navigate("/submit-complaint");
+      console.log(navigate)
       return;
     }
 
@@ -73,6 +74,7 @@ const FormPage = () => {
     };
 
       await generateTicket(updatedFormData);
+      navigate('/confirm')
       // You can send the form data to an API or perform any desired action here.
     } catch (error) {
       console.error(error);
@@ -196,7 +198,7 @@ const FormPage = () => {
             className="submit-button"
             onClick={handleSubmit}
           >
-            <Link to={route}>submit</Link>
+            <Link>submit</Link>
           </button>
         </div>
       </form>
