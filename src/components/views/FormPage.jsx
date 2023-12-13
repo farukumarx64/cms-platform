@@ -5,6 +5,7 @@ import axios from "axios";
 import { useTicket } from "../../contexts/TicketContext";
 import Database from "../../backend/dataBase";
 import StorageService from "../../backend/storage";
+import sendVerificationEmail from "../../backend/sendVerificationEmail";
 
 const FormPage = () => {
   const { setTicket } = useTicket();
@@ -90,6 +91,7 @@ const FormPage = () => {
       const dataBase = new Database();
       dataBase.insertData(formData, response.data.ticketID);
       dataBase.queryAll();
+      sendVerificationEmail(formData.email, response.data.ticketID)
     } catch (error) {
       console.error(error);
       throw error; // Re-throw the error to be caught in the handleSubmit function
@@ -130,7 +132,7 @@ const FormPage = () => {
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            placeholder="email@gmail.com"
+            placeholder="email@example.com"
             required
           />
         </div>
