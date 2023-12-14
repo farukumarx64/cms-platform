@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../styles/LandingPage.css"; // You can create this CSS file for styling
 import complaintImage from "/images/landing_illus.svg"; // Replace with your image file
 import Auth from "../../backend/auth";
@@ -6,9 +6,13 @@ import Auth from "../../backend/auth";
 const auth = new Auth();
 
 const LandingPage = () => {
+  const navigate = useNavigate()
   async function handleLogout() {
     try {
       auth.signOut();
+      const response = await auth.getSession();
+      console.log(response.session)
+      navigate('/')
     } catch (error) {
       console.error(error);
     }
