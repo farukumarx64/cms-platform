@@ -2,19 +2,22 @@
 import { useState } from "react";
 import Auth from "../../backend/auth";
 import "../../styles/Login.css";
+import { useNavigate } from "react-router-dom";
 
 const auth = new Auth();
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const authenticate = async () => {
     const response = await auth.getSession();
+    console.log(response)
     const token = response.session.access_token;
     if (token) {
       console.log("session token: ", token);
-      window.location.href = "/home";
+      navigate("/home");
     }
   };
 
